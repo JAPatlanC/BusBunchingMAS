@@ -1,0 +1,14 @@
+MAS vacuumcleaner {
+
+	infrastructure: Centralised
+
+	environment: controller.VCWorld
+	
+	agents:
+		vc;
+	
+	classpath:"../../libs/gurobi.jar";
+	
+	aslSourcePath:
+		"src/asl";
+}
