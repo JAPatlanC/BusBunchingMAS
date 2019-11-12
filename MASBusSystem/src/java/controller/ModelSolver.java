@@ -12,33 +12,42 @@ import mathematicalModels.CMOTV2BusHoldingModel;
 import model.Bus;
 import model.ModelInstance;
 import model.Stop;
-/*
- * Classname: ModelSolver
+// TODO: Auto-generated Javadoc
+
+/**
  * Description: Solver for instances of ModelInstance 
  * Author: Jesús Angel Patlán Castillo
- * Changelog:
- * Date		 *********** Description
- * 05/08/2019			First Version: Added solveBusHolding
- * 26/08/2019			Code clean
- * 29/08/2019			Integration with ModelInstance class
  * 
  */
 public class ModelSolver {
+	
+	/**
+	 * Solve bus holding.
+	 *
+	 * @param mi the mi
+	 * @return the model instance
+	 */
 	/*
 	 * Method: solveBusHolding
 	 * Description: Solves a ModelInstance by using bus holding strategy
 	 * Parameters: ModelInstance - Instance to solve
 	 * Return: NULL
 	 */
-	public static void solveBusHolding(ModelInstance mi) {
+	public static ModelInstance solveBusHolding(ModelInstance mi) {
 		try {
-			//CMOTBusHoldingModel model = new CMOTBusHoldingModel(mi);
-			CMOTV2BusHoldingModel model = new CMOTV2BusHoldingModel(mi);
-			model.optimize();
-			model.getValues();
+			if(mi.busHoldingMethod.equals("CMOTV2")) {
+				CMOTV2BusHoldingModel model = new CMOTV2BusHoldingModel(mi);
+				model.optimize();	
+				mi.h = model.getValues();
+			}else {
+				CMOTBusHoldingModel model = new CMOTBusHoldingModel(mi);
+				model.optimize();
+				mi.h = model.getValues();	
+			}
 		} catch (GRBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return mi;
 	}
 }

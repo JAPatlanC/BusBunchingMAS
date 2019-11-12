@@ -14,7 +14,8 @@ Actions:
 */
 
 // in case I am in a dirty location
-+dirty: true <- suck.
++start1: true <- continue1.
++start2: true <- continue2.
 
 // in case I am in a clean location
 +clean: pos(l) <- right.

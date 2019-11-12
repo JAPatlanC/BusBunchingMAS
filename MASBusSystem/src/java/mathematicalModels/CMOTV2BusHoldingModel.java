@@ -22,6 +22,7 @@ import model.Stop;
  */
 public class CMOTV2BusHoldingModel {
 	public GRBModel model;
+	public ModelInstance mi;
 	public int k; // # Buses
     public int s; // # Stops
     public float maxHold; //Max hold in the stops in minutes
@@ -54,7 +55,7 @@ public class CMOTV2BusHoldingModel {
     public GRBVar[][] alight; //Alight for bus k in S
 	
 	public CMOTV2BusHoldingModel(ModelInstance mi) throws GRBException {
-
+			this.mi = mi;
 	      // Create empty environment, set options, and start
 	      GRBEnv env = new GRBEnv(true);
 	      env.set("logFile", "mip1.log");
@@ -65,7 +66,7 @@ public class CMOTV2BusHoldingModel {
 	      // Instances variables
 	      double buffer=0.8; // Headaway % tolerance for penalty
 	      
-	      k = mi.listBuses.size(); // # Buses
+	      k = mi.getActiveBuses().size();// # Buses
 	      s = mi.listStops.size(); // # Stops
 	      maxHold=mi.maxHold; //Max hold in the stops in minutes
 	      dwellPer=mi.dwellPer; //Dwell time per person
@@ -96,7 +97,7 @@ public class CMOTV2BusHoldingModel {
 	      positionBuses = new float[k];  //Position between buses (in time)
 	      passengers = new float[k]; // Passengers in each bus after stop Sdk
 	      sdk = new float[k]; // Previous stop that bus k has passed
-	      for(Bus b : mi.listBuses) {
+	      for(Bus b : mi.getActiveBuses()) {
 	    	  indexBuses[count] = b.id;
 	    	  positionBuses[count] = b.position;
 	    	  passengers[count] = b.passengers; 
@@ -337,7 +338,19 @@ public class CMOTV2BusHoldingModel {
 			      model.addConstr(exprLS, GRB.EQUAL, exprRS, "C4:"+i+","+j);
 	    	  }
 	      }
+	      //Constraint 8: Buses can't overtake
+	      /*for(int i=1; i<k;i++) {
+	    	  for(int j=(int)sdk[i-1]; j<s-1;j++) {
+			      GRBLinExpr exprRS = new GRBLinExpr();
+			      GRBLinExpr exprLS = new GRBLinExpr();
 
+			      exprLS.addTerm(1, td[i][j]);
+			      exprRS.addTerm(1, td[i-1][j]);
+			     
+			      model.addConstr(exprLS, GRB.GREATER_EQUAL, exprRS, "C8:"+i+","+j);
+	    	  }
+	      }
+	      */
 	      // Optimize model
 	      model.getEnv().set(GRB.DoubleParam.TimeLimit,1000);
 	      model.getEnv().set(GRB.DoubleParam.MIPGap,0.001);
@@ -346,27 +359,31 @@ public class CMOTV2BusHoldingModel {
 	public void optimize() throws GRBException{
 		this.model.optimize();
 	}
-	public void getValues() throws GRBException{
+	public int[][] getValues() throws GRBException{
+		int[][] holds = new int[mi.listBuses.size()][mi.listStops.size()];
 	      if(model.get(GRB.IntAttr.Status) == GRB.OPTIMAL) {
-	      for(int i=0;i<k;++i) {
-	    	  for(int j=(int)sdk[i]+1;j<s-1;j++) {
-	    		  System.out.println("h: "+h[i][j].get(GRB.DoubleAttr.X));
-	    		  System.out.println("alight: "+alightPer*alight[i][j].get(GRB.DoubleAttr.X));
-	    		  System.out.println("dwell: "+dwellPer*dwell[i][j].get(GRB.DoubleAttr.X));
-	    		  System.out.println("");
-	    	  }
-	      }
+		      for(int i=0;i<k;++i) {
+		    	  for(int j=(int)sdk[i]+1;j<s-1;j++) {
+		    		  holds[i][j] = (int) Math.round(h[i][j].get(GRB.DoubleAttr.X));
+		    		  //System.out.println("h["+i+"]["+j+"]: "+h[i][j].get(GRB.DoubleAttr.X));
+		    		  //System.out.println("alight: "+alightPer*alight[i][j].get(GRB.DoubleAttr.X));
+		    		  //System.out.println("dwell: "+dwellPer*dwell[i][j].get(GRB.DoubleAttr.X));
+		    		  //System.out.println("");
+		    	  }
+		      }
+		      return holds;
 	      }else {
-	    	  System.out.println("Infeasible model");
+	    	  //System.out.println("Infeasible model");
 	    	  model.computeIIS();
 	    	  GRBConstr[] constr = model.getConstrs();
-	    	  System.out.println("Couldn't satisfy the following constraint(s):");
+	    	  //System.out.println("Couldn't satisfy the following constraint(s):");
 	    	  for(int i=0;i<model.get(GRB.IntAttr.NumConstrs);i++) {
 
 	    		  if(constr[i].get(GRB.IntAttr.IISConstr) == 1) {
-	    			  System.out.println(constr[i].get(GRB.StringAttr.ConstrName));
+	    			  //System.out.println(constr[i].get(GRB.StringAttr.ConstrName));
 	    		  }
 	    	  }
+	    	  return holds;
 	      }
 	
 	}

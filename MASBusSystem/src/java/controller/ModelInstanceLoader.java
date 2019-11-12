@@ -5,30 +5,28 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import model.Bus;
 import model.ModelInstance;
 import model.Stop;
 
-/*
- * Classname: ModelInstanceLoader
+// TODO: Auto-generated Javadoc
+/**
  * Description: Loads ModelInstance from txt files 
- * Author: Jesús Angel Patlán Castillo
- * Changelog:
- * Date		 *********** Description
- * 28/08/2019			First Version
- * 07/09/2019			Updated the format of the instances
- * 09/09/2019			Bugs Fixed
  * 
  */
 public class ModelInstanceLoader {
 
-	/*
-	 * Method: solveBusHolding Description: Solves a ModelInstance by using bus
-	 * holding strategy Parameters: String - Folder which contains the models
-	 * Return: List<ModelInstance> - Instances loaded from the folder
+	/**
+	 * Load bus holding models.
+	 *
+	 * @param folderName the folder name
+	 * @return the list of model instance
 	 */
 	public static List<ModelInstance> loadBusHoldingModels(String folderName) {
 		List<ModelInstance> listModelInstances = new ArrayList<ModelInstance>();
@@ -39,8 +37,9 @@ public class ModelInstanceLoader {
 		File[] listOfFiles = folder.listFiles();
 		int fils = 0;
 		int conta=0;
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		Date today = new Date();
 		for (File file : listOfFiles) {
-			System.out.println("Leyendo instancia "+(conta++));
 			ModelInstance mi = new ModelInstance();
 			String fileName = file.getName();
 			try {
@@ -52,6 +51,7 @@ public class ModelInstanceLoader {
 				int numLinea = 1;
 				while ((data = bufferedReader.readLine()) != null) {
 					if (data.contains("#")) {
+						//System.out.println(getFileValue(data));
 							switch (numLinea) {
 							// Instance Data
 							//Snapshot Time
@@ -64,6 +64,8 @@ public class ModelInstanceLoader {
 								for (int i = 0; i < Integer.parseInt(numberStops); i++) {
 									mi.listStops.add(new Stop(i + 1));
 								}
+								mi.lastStopId = mi.listStops.size();
+								
 								break;
 							//Number of buses
 							case 3:
@@ -89,12 +91,33 @@ public class ModelInstanceLoader {
 							case 7:
 								mi.alightPer = Float.parseFloat(getFileValue(data));
 								break;
-							//Headways
+							//Release time 
 							case 8:
-								mi.headways = Float.parseFloat(getFileValue(data));
+								mi.releaseTime = Float.parseFloat(getFileValue(data));
+								break;
+							//Instance end time 
+							case 9:
+								mi.tn = Float.parseFloat(getFileValue(data));
+								break;
+							//Bus Holding Calls 
+							case 10:
+								mi.busHoldingCalls = Integer.parseInt(getFileValue(data));
+								mi.busHoldingPeriod = (int) Math.round(mi.tn*0.9 / (mi.busHoldingCalls+1));
+								break;
+							//Buses overtake 
+							case 11:
+								mi.busesOvertake = getFileValue(data).equals("true")?true:false;
+								break;
+							//Circular route 
+							case 12:
+								mi.circularRoute = getFileValue(data).equals("true")?true:false;
+								break;
+							//Bus holding method 
+							case 13:
+								mi.busHoldingMethod = getFileValue(data);
 								break;
 							//Arrive rate each stop
-							case 9:
+							case 14:
 								data = bufferedReader.readLine();
 								int i=0;
 								for(String metadata : data.split("\\|")) {
@@ -103,7 +126,7 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//Descend rate each stop
-							case 10:
+							case 15:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
@@ -112,7 +135,7 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//Distances between stops
-							case 11:
+							case 16:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
@@ -128,7 +151,7 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//People waiting at each stop
-							case 12:
+							case 17:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
@@ -137,10 +160,10 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//Indexes of buses
-							case 13:
+							case 18:
 								break;
 							//Buses current positions
-							case 14:
+							case 19:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
@@ -149,7 +172,7 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//Buses current passengers
-							case 15:
+							case 20:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
@@ -158,12 +181,15 @@ public class ModelInstanceLoader {
 								}
 								break;
 							//Last stop visited of each stop
-							case 16:
+							case 21:
 								data = bufferedReader.readLine();
 								i=0;
 								for(String metadata : data.split("\\|")) {
 									mi.listBuses.get(i).capacity = busCapacity;
-									mi.listBuses.get(i).previousStop = mi.listStops.get(Integer.parseInt(metadata)-1);
+									if(Integer.parseInt(metadata)==0)
+										mi.listBuses.get(i).previousStop = null;
+									else
+										mi.listBuses.get(i).previousStop = mi.listStops.get(Integer.parseInt(metadata)-1);
 									i++;
 								}
 								break;
@@ -171,9 +197,10 @@ public class ModelInstanceLoader {
 							numLinea++;
 					}
 				}
-
+				mi.id = mi.listStops.size()+"-"+mi.listBuses.size();
 				// Closing file.
 				bufferedReader.close();
+				mi.h = new int[mi.listBuses.size()][mi.listStops.size()];
 				listModelInstances.add(mi);
 			} catch (FileNotFoundException ex) {
 				System.out.println("Unable to open file '" + fileName + "'");
@@ -184,6 +211,12 @@ public class ModelInstanceLoader {
 		return listModelInstances;
 	}
 
+	/**
+	 * Gets the file value.
+	 *
+	 * @param data the data
+	 * @return the file value
+	 */
 	public static String getFileValue(String data) {
 		String value = data.substring(data.lastIndexOf("=") + 1).strip();
 		return value;

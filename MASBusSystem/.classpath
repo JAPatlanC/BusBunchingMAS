@@ -10,5 +10,11 @@
 	<classpathentry exported="true" kind="lib" path="D:/Descargas/jason-2.4/libs/jason-2.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/gurobi811/win64/lib/gurobi.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/gurobi811/win64/lib/gurobi-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1-tests.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1-test-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Descargas/commons-math3-3.6.1/commons-math3-3.6.1-tools.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

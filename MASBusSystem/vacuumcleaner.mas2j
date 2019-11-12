@@ -7,7 +7,7 @@ MAS vacuumcleaner {
 	agents:
 		vc;
 	
-	classpath:"../../libs/gurobi.jar";
+	classpath:"../../libs/gurdobi.jar";"../../libs/commons-math3-3.6.1.jar";
 	
 	aslSourcePath:
 		"src/asl";
