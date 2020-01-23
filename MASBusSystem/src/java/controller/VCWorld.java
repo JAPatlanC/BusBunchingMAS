@@ -6,6 +6,7 @@ package controller;
  */
 import jason.asSyntax.*;
 import jason.environment.*;
+import jason.infra.repl.mi;
 import model.Bus;
 import model.ModelInstance;
 import model.Stop;
@@ -45,11 +46,12 @@ public class VCWorld extends Environment {
 	private int i=0;
 	
 	/** The samples. */
-	private int samples=5;
+	private int samples=1;
 	
 	/** The total distances. */
 	private List<Float> totalDistances;
 
+	private ModelSolver ms;
 	/**
 	 * Initializes the MAS Bus System
 	 *
@@ -60,6 +62,7 @@ public class VCWorld extends Environment {
 		modelInstance = ModelInstanceLoader.loadBusHoldingModels(folderName).get(0);
 		logger.info("Initializing");
 		totalDistances = new ArrayList<Float>();
+		ModelSolver ms =null;
 		// The name of the folder to read.
 		// String folderName =
 		// "C:\\Users\\ja_pa\\OneDrive\\Documentos\\Tesis\\instancias\\Instances on T
@@ -81,9 +84,9 @@ public class VCWorld extends Environment {
 		clearPercepts();
 		updateEnvironment();
 		if (ban)
-			addPercept(Literal.parseLiteral("start1"));
+			addPercept(Literal.parseLiteral("onRoute"));
 		else
-			addPercept(Literal.parseLiteral("start2"));
+			addPercept(Literal.parseLiteral("onStop"));
 	}
 
 	/**
@@ -130,7 +133,17 @@ public class VCWorld extends Environment {
 		}
 		// Call bus holding solver each period
 		if (modelInstance.ti % modelInstance.busHoldingPeriod == 0 && modelInstance.ti != 0) {
-			modelInstance = ModelSolver.solveBusHolding(modelInstance);
+			//modelInstance = ModelSolver.solveBusHolding(modelInstance);
+			ms = new ModelSolver(modelInstance);
+			Thread thread = new Thread(ms);
+			thread.start();
+		}
+		if(ms != null) {
+			System.out.println(modelInstance);
+			if(ms.isReady()) {
+				modelInstance.h = ms.getMi().h;
+				ms = null;
+			}
 		}
 		// Update stop arrive
 		modelInstance.simulateStopArrives();

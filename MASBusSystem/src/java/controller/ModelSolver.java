@@ -19,7 +19,7 @@ import model.Stop;
  * Author: Jesús Angel Patlán Castillo
  * 
  */
-public class ModelSolver {
+public class ModelSolver implements Runnable{
 	
 	/**
 	 * Solve bus holding.
@@ -27,12 +27,20 @@ public class ModelSolver {
 	 * @param mi the mi
 	 * @return the model instance
 	 */
+	public ModelInstance mi;
+	
+	public boolean ready;
 	/*
 	 * Method: solveBusHolding
 	 * Description: Solves a ModelInstance by using bus holding strategy
 	 * Parameters: ModelInstance - Instance to solve
 	 * Return: NULL
 	 */
+	public ModelSolver(ModelInstance mi) {
+		this.mi = mi;
+		ready=false;
+	}
+	/*
 	public static ModelInstance solveBusHolding(ModelInstance mi) {
 		try {
 			if(mi.busHoldingMethod.equals("CMOTV2")) {
@@ -50,4 +58,48 @@ public class ModelSolver {
 		}
 		return mi;
 	}
+	 */
+	
+	@Override
+	public void run() {
+		try{
+			Thread.sleep(5000);
+		}catch(Exception e) {
+			
+		}
+		try {
+			if(mi.busHoldingMethod.equals("CMOTV2")) {
+				CMOTV2BusHoldingModel model = new CMOTV2BusHoldingModel(mi);
+				model.optimize();	
+				mi.h = model.getValues();
+			}else {
+				CMOTBusHoldingModel model = new CMOTBusHoldingModel(mi);
+				model.optimize();
+				mi.h = model.getValues();	
+			}
+			ready=true;
+			System.out.println("LISTO");
+		} catch (GRBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public ModelInstance getMi() {
+		return mi;
+	}
+
+	public void setMi(ModelInstance mi) {
+		this.mi = mi;
+	}
+
+	public boolean isReady() {
+		return ready;
+	}
+
+	public void setReady(boolean ready) {
+		this.ready = ready;
+	}
+	
+	
 }
