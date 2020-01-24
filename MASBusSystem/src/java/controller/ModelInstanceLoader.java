@@ -143,9 +143,9 @@ public class ModelInstanceLoader {
 									mi.listStops.get(i).distNextStop = Float.parseFloat(metadata);
 									mi.listStops.get(i).distDepot = mi.turn;
 									if(i!=0)
-										mi.listStops.get(i).distPreviousStop = mi.listStops.get(i - 1).distNextStop;
+										//mi.listStops.get(i).distPreviousStop = mi.listStops.get(i - 1).distNextStop;
 									if(i==mi.listStops.size()-1) {
-										mi.listStops.get(0).distPreviousStop = mi.listStops.get(i).distNextStop;
+										//mi.listStops.get(0).distPreviousStop = mi.listStops.get(i).distNextStop;
 									}
 									i++;
 								}
@@ -188,8 +188,12 @@ public class ModelInstanceLoader {
 									mi.listBuses.get(i).capacity = busCapacity;
 									if(Integer.parseInt(metadata)==0)
 										mi.listBuses.get(i).previousStop = null;
-									else
-										mi.listBuses.get(i).previousStop = mi.listStops.get(Integer.parseInt(metadata)-1);
+									else {
+										if(Integer.parseInt(metadata)-2>0)
+											mi.listBuses.get(i).previousStop = mi.listStops.get(Integer.parseInt(metadata)-2);
+										else
+											mi.listBuses.get(i).previousStop = mi.listStops.get(mi.listStops.size()-1);
+									}
 									i++;
 								}
 								break;

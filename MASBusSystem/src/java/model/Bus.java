@@ -20,7 +20,7 @@ public class Bus {
 	public boolean isActive;
 	
 	/** The Position of the bus in the route. */
-	public float position;
+	public double position;
 	
 	/** The previous stop. */
 	public Stop previousStop;
@@ -54,7 +54,16 @@ public class Bus {
 	
 	/** The Holding time of the current bus. */
 	public int h;
+	
+	/** If the bus agent already specified an action **/
+	public boolean isReady;
 
+	/** The bus must skip the next stop. */
+	public boolean mustSkipStop;
+
+	/** The speed of the bus. */
+	public double speed;
+	
 	/**
 	 * Instantiates a new bus.
 	 *
@@ -63,6 +72,8 @@ public class Bus {
 	public Bus(int id) {
 		this.id = id;
 		this.isBusHolding=false;
+		isReady=true;
+		speed=0;
 	}
 	
 	/**

@@ -62,11 +62,6 @@ public class ModelSolver implements Runnable{
 	
 	@Override
 	public void run() {
-		try{
-			Thread.sleep(5000);
-		}catch(Exception e) {
-			
-		}
 		try {
 			if(mi.busHoldingMethod.equals("CMOTV2")) {
 				CMOTV2BusHoldingModel model = new CMOTV2BusHoldingModel(mi);
@@ -80,6 +75,7 @@ public class ModelSolver implements Runnable{
 			ready=true;
 			System.out.println("LISTO");
 		} catch (GRBException e) {
+			ready=true;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

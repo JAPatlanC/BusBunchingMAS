@@ -99,7 +99,7 @@ public class CMOTV2BusHoldingModel {
 	      sdk = new float[k]; // Previous stop that bus k has passed
 	      for(Bus b : mi.getActiveBuses()) {
 	    	  indexBuses[count] = b.id;
-	    	  positionBuses[count] = b.position;
+	    	  positionBuses[count] = (float)b.position;
 	    	  passengers[count] = b.passengers; 
 	    	  sdk[count] = b.previousStop.id;
 	    	  count++;

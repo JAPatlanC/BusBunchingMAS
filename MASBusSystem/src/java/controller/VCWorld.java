@@ -29,9 +29,13 @@ import java.util.*;
  * The Class VCWorld.
  */
 public class VCWorld extends Environment {
-	
+
 	/** The ban. */
 	private boolean ban = true;
+	/** The ban. */
+	private boolean ban2 = true;
+
+	private Thread thread = null;
 	
 	/** The model instance. */
 	private ModelInstance modelInstance;
@@ -74,19 +78,22 @@ public class VCWorld extends Environment {
 		 * ModelSolver.solveBusHolding(mi);
 		 * System.out.println("----------------------------------------------"); }
 		 */
-		updatePercepts();
+		updatePercepts("control");
 	}
 
 	/**
 	 * Update percepts.
 	 */
-	private void updatePercepts() {
+	private void updatePercepts(String agName) {
 		clearPercepts();
-		updateEnvironment();
+		if(agName.equals("control"))
+			updateEnvironment();
+
+		
 		if (ban)
-			addPercept(Literal.parseLiteral("onRoute"));
+			addPercept(Literal.parseLiteral("paso1"));
 		else
-			addPercept(Literal.parseLiteral("onStop"));
+			addPercept(Literal.parseLiteral("paso2"));
 	}
 
 	/**
@@ -98,13 +105,54 @@ public class VCWorld extends Environment {
 	 */
 	@Override
 	public boolean executeAction(String agName, Structure action) {
-		if (action.getFunctor().equals("continue1") && modelInstance.ti != modelInstance.tn) {
-			ban = false;
+		System.out.println(agName);
+		System.out.println(action.getFunctor());
+		if(agName.equals("control")) {
+			if (action.getFunctor().equals("skipStop") && modelInstance.ti != modelInstance.tn) {
+				System.out.println("Skipping...");
+				try {
+					Thread.sleep(5000);
+				}catch(Exception e) {
+					
+				}
+				int agId = Integer.parseInt(action.getTerm(1).toString());
+				Bus bus = modelInstance.listBuses.get(agId);
+				for(Bus b : modelInstance.getActiveBuses()) {
+					if(b.position - bus.position > -5 && b.position - bus.position<0) {
+						bus.mustSkipStop=true;
+					}
+				}
+			}
+			if (action.getFunctor().equals("continue1") && modelInstance.ti != modelInstance.tn) {
+				ban = false;
+			}
+			if (action.getFunctor().equals("continue2") && modelInstance.ti != modelInstance.tn) {
+				ban = true;
+			}
+			
+			updatePercepts("control");
+		}else {
+			int agId = Integer.valueOf(agName.replaceFirst(".*?(\\d+).*", "$1"))-1;
+			System.out.println(agId);
+			modelInstance.listBuses.get(agId).isReady=true;
+			if(action.getFunctor().equals("doBusHold") && modelInstance.ti != modelInstance.tn) {
+				System.out.println("Do BUSHOLDING");
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+				}
+			}
+			if (action.getFunctor().equals("continue1") && modelInstance.ti != modelInstance.tn) {
+				ban2 = false;
+				
+			}
+			if (action.getFunctor().equals("continue2") && modelInstance.ti != modelInstance.tn) {
+				ban2 = true;
+				
+			}
+			updatePercepts(agName);
 		}
-		if (action.getFunctor().equals("continue2") && modelInstance.ti != modelInstance.tn) {
-			ban = true;
-		}
-		updatePercepts();
 		return true;
 	}
 
@@ -120,29 +168,58 @@ public class VCWorld extends Environment {
 	 * Update environment.
 	 */
 	public void updateEnvironment() {
-		//System.out.println(modelInstance);
+		System.out.println(modelInstance);
 		try {
-			Thread.sleep(50);
+			Thread.sleep(5);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		// Free bus at first stop if there is a bus not active
 		if (!modelInstance.isAllFree() && modelInstance.ti % modelInstance.releaseTime == 0) {
+			if(modelInstance.ti%10==0) {
+				for(Bus b : modelInstance.getActiveBuses()) {
+					addPercept("bcBusPosition("+b.id+","+b.position+")");
+					addPercept("bcPassengers("+b.id+","+b.position+")");
+					addPercept("bcBusSpeed("+b.id+","+b.position+")");
+					addPercept("bcBusNextStop("+b.id+","+b.position+")");	
+				}
+			}
 			modelInstance.activeNextBus();
+
+			try {
+				String busName = getEnvironmentInfraTier().getRuntimeServices().createAgent("Bus_"+modelInstance.getActiveBuses().size(), // agent name
+						"bus.asl", // AgentSpeak source
+						null, // default agent class
+						null, // default architecture class
+						null, // default belief base parameters
+						null, null);
+				addPercept(busName,Literal.parseLiteral("onRoute"));
+				getEnvironmentInfraTier().getRuntimeServices().startAgent(busName);
+			} catch (Exception e) {
+				System.out.println("Can't add agent");
+				e.printStackTrace();
+			} // default settings
 		}
+
 		// Call bus holding solver each period
 		if (modelInstance.ti % modelInstance.busHoldingPeriod == 0 && modelInstance.ti != 0) {
-			//modelInstance = ModelSolver.solveBusHolding(modelInstance);
-			ms = new ModelSolver(modelInstance);
-			Thread thread = new Thread(ms);
-			thread.start();
+				thread = new Thread(ms);
+				ms = new ModelSolver(modelInstance);
+				thread.start();
 		}
 		if(ms != null) {
-			System.out.println(modelInstance);
 			if(ms.isReady()) {
 				modelInstance.h = ms.getMi().h;
+				for(int i=0;i<modelInstance.h.length;i++) {
+					for(int j=0;j<modelInstance.h[i].length;j++) {
+						if(modelInstance.h[i][j]>0) {
+							addPercept("control",Literal.parseLiteral("tellBH(Bus_"+(i+1)+","+(j+1)+","+modelInstance.h[i][j]+")"));
+						}
+					}
+				}
 				ms = null;
+				thread=null;
 			}
 		}
 		// Update stop arrive
@@ -156,6 +233,16 @@ public class VCWorld extends Environment {
 		// Update bus passengers aboarding
 		modelInstance.simulateBusAboard();
 
+		for(Bus b : modelInstance.getActiveBuses()) {
+			String busName = "Bus_"+b.id;
+			if(b.isOnStop) {
+				addPercept(busName,Literal.parseLiteral("onStop"));
+			}else {
+				addPercept(busName,Literal.parseLiteral("onRoute"));
+				addPercept("control",Literal.parseLiteral("validateSkipStop("+b.id+")"));
+			}
+		}
+		
 		// Update file positions
 		modelInstance.updatePositionTxt();
 		try {

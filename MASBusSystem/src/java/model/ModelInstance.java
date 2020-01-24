@@ -140,7 +140,7 @@ public class ModelInstance {
 		for(Bus b : getActiveBuses()) {
 			for(Bus b2 : getActiveBuses()) {
 				if(b!=b2) {
-					distances.add(Math.abs(b.position-b2.position));
+					distances.add((float) Math.abs(b.position-b2.position));
 				}
 			}
 			dist+=distances.stream().min(Comparator.naturalOrder()).get();
@@ -239,7 +239,7 @@ public class ModelInstance {
 	 * Simulate stop arrives.
 	 */
 	public void simulateStopArrives() {
-
+		/*
 		File folder = new File(folderStopsRateName);
 		File[] listOfFiles = folder.listFiles();
 		File file = listOfFiles[0];
@@ -254,14 +254,14 @@ public class ModelInstance {
 			e.printStackTrace();
 		}
 
-		/*
+		*/
 		String positions = "";
 		for (Stop s : listStops) {
 			positions += s.simulateArrive() +",";
 		}
 		positions = removeLastChar(positions); 
 		List<String> list = Arrays.asList(positions);
-	    try {
+	    /*try {
 			Files.write(Paths.get("stopsRate.log"), list,StandardOpenOption.APPEND);
 		} catch (Exception e) {
 			try {
@@ -285,13 +285,6 @@ public class ModelInstance {
 			for (Stop s : listStops) {
 				if (s.distDepot == b.position) {
 					if (h[b.id - 1][s.id - 1] > 0) {
-						//System.out.println("BUS HOLDING");
-						try {
-							Thread.sleep(0);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 						b.isBusHolding = true;
 						h[b.id - 1][s.id - 1]--;
 					} else
@@ -310,7 +303,9 @@ public class ModelInstance {
 
 			if (b.isBusHolding || isOccupiedNextPosition(b))
 				continue;
-			b.position++;
+			if(b.speed<1)
+				b.speed+=0.1;
+			b.position+=b.speed;
 			if(b.position > turn && circularRoute) {
 				b.previousStop = listStops.get(0);
 				b.isOnStop=false;
@@ -320,10 +315,16 @@ public class ModelInstance {
 				b.isActive=false;
 			}
 			for (Stop s : listStops) {
-				if (s.distDepot == b.position && !s.isBusOnStop) {
+				if (s.distDepot == Math.floor(b.position) && !s.isBusOnStop && !b.mustSkipStop && b.previousStop!=s) {
+					b.speed+=0;
+					b.position = (float) Math.floor(b.position);
 					b.isOnStop = true;
 					b.previousStop = s;
 					s.isBusOnStop = true;
+					break;
+				}
+				else if (s.distDepot == Math.floor(b.position) && !s.isBusOnStop && b.mustSkipStop && b.previousStop!=s) {
+					b.mustSkipStop=false;
 					break;
 				}
 			}
@@ -339,7 +340,7 @@ public class ModelInstance {
 	public boolean isOccupiedNextPosition(Bus b) {
 		if (!b.isOnStop && !busesOvertake) {
 			for (Bus b2 : getActiveBuses()) {
-				if (b.position + 1 == b2.position) {
+				if (b2.position - b.position <= 1 &&b2.position - b.position>0) {
 					return true;
 				}
 			}
@@ -414,6 +415,27 @@ public class ModelInstance {
 				} else
 					b.h -= 1;
 			}
+		}
+	}
+
+	/**
+	 * Checks if all buses agents made a decision
+	 */
+	public boolean allReady(){
+		boolean ban = true;
+		for(Bus b : listBuses) {
+			if(!b.isReady)
+				ban=false;
+		}
+			
+		return ban;
+	}
+	/**
+	 * Prepares the buses for the next action
+	 */
+	public void prepareBuses(){
+		for(Bus b : listBuses) {
+			b.isReady=false;
 		}
 	}
 
