@@ -1,13 +1,18 @@
 /*
 Control agent
 
-Perceptions:
-. onRoute: the current location is on route
-. onStop: the current location is at a stop
+. tellBH: tells a bus to do bus holding
+. validateSkipStop: checks if the bus must skip the next stop
+* start: keeps the simulation going
+* finish: ends the simulation
 */
+!start.
 
-+tellBH(bus,stop,time): tellBH <- .send(bus,tell,busHold(stop,time)).
-+validateSkipStop(bus): validateSkipStop <- skipStop(bus).abolish(validateSkipStop(bus)).
++!tellBH(BUS,STOP,TIME): tellBH <- .send(BUS,tell,busHold(STOP,TIME)).
 
-+paso1: paso1 <- continue1.
-+paso2: paso2 <- continue2.
++!validateSkipStop(BUS): validateSkipStop(BUS) <- skipStop(BUS).abolish(validateSkipStop(BUS))!start.
+
++!start: start & tellBH(BUS,STOP,TIME) & not validateSkipStop(BUS) & not finish <- !tellBH(BUS,STOP,TIME).
++!start: start & validateSkipStop(BUS) & not tellBH(BUS,STOP,TIME) & not finish <- !validateSkipStop(BUS).
++!start: start & not validateSkipStop(BUS) & not tellBH(BUS,STOP,TIME) & not finish<- start;!start.
++!start:finish<- .print("Simulation end").

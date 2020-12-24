@@ -1,4 +1,7 @@
 package model;
+
+import java.util.HashMap;
+
 // TODO: Auto-generated Javadoc
 
 /**
@@ -26,10 +29,10 @@ public class Bus {
 	public Stop previousStop;
 	
 	/** The Distance between the previous bus. */
-	public float distPreviousBus;
+	public double distPreviousBus;
 	
 	/** The Distance between the next bus. */
-	public float distNextBus;
+	public double distNextBus;
 	
 	/** The next bus. */
 	public Bus nextBus;
@@ -63,7 +66,15 @@ public class Bus {
 
 	/** The speed of the bus. */
 	public double speed;
+
+	/** The holding time of the bus in the given stop. */
+	public HashMap<Integer,Integer> busHoldingTime;
+
+	/** If the bus agent must increase its speed**/
+	public boolean speedUp;
 	
+	/** If the bus agent must slow its speed**/
+	public boolean slowDown;
 	/**
 	 * Instantiates a new bus.
 	 *
@@ -74,6 +85,8 @@ public class Bus {
 		this.isBusHolding=false;
 		isReady=true;
 		speed=0;
+		speedUp=true;
+		slowDown=false;
 	}
 	
 	/**
@@ -110,6 +123,5 @@ public class Bus {
 		return "Bus [id="+id+", capacity=" + capacity + ", passengers=" + passengers + ", position=" + position + ", previousStop="
 				+ previousStopId + ", h="+h+", status= "+status()+"]";
 	}
-	
 	
 }

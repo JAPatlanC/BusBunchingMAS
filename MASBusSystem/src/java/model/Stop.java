@@ -42,6 +42,9 @@ public class Stop {
 	/** The is bus on stop. */
 	public boolean isBusOnStop;
 	
+	/** The speed limit between this stop and the next one. */
+	public float speedLimit;
+	
 	/**
 	 * Instantiates a new stop.
 	 *

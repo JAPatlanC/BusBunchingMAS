@@ -96,6 +96,18 @@ public class ModelInstance {
 	/** The folder stops rate name. */
 	private String folderStopsRateName = "C:\\Users\\ja_pa\\git\\BusBunchingMAS\\MASBusSystem\\StopsRate";
 
+	/** The headway tolerance range. */
+	public float headwayToleranceRange;
+
+	/** The number of passengers that aboarded through the simulation. */
+	public int passengersAboarding;
+
+	/** The number of passengers that descended through the simulation. */
+	public int passengersDescended;
+
+	/** The number of passengers waiting at the current time. */
+	public int passengersWaiting;
+	
 	/**
 	 * Instantiates a new model instance.
 	 */
@@ -239,13 +251,12 @@ public class ModelInstance {
 	 * Simulate stop arrives.
 	 */
 	public void simulateStopArrives() {
-		/*
 		File folder = new File(folderStopsRateName);
 		File[] listOfFiles = folder.listFiles();
 		File file = listOfFiles[0];
 		FileReader fileReader;
 		try {
-			String[] line = Files.readAllLines(Paths.get("stopsRate.log")).get((int) ti).split(",");
+			String[] line = Files.readAllLines(Paths.get(folderStopsRateName+"\\stopsRateEcovia.log")).get((int) ti).split(",");
 			for(int i =0;i<line.length;i++) {
 				listStops.get(i).passengersLeft+=Integer.valueOf(line[i]);
 			}
@@ -253,15 +264,16 @@ public class ModelInstance {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		/*
 
-		*/
 		String positions = "";
 		for (Stop s : listStops) {
 			positions += s.simulateArrive() +",";
 		}
+		*/
+	    /*
 		positions = removeLastChar(positions); 
-		List<String> list = Arrays.asList(positions);
-	    /*try {
+		List<String> list = Arrays.asList(positions);try {
 			Files.write(Paths.get("stopsRate.log"), list,StandardOpenOption.APPEND);
 		} catch (Exception e) {
 			try {
@@ -296,15 +308,63 @@ public class ModelInstance {
 	}
 
 	/**
+	 * Determines if the bus should increase or decrease its speed
+	 */
+	public void determineBusSpeedRegulation(Bus b) {
+			b.distPreviousBus = 0;
+			b.distNextBus = 0;
+			if(b.position>b.previousBus.position) {
+				b.distPreviousBus=b.position-b.previousBus.position;
+			}else {
+				b.distPreviousBus=Math.abs((b.previousBus.position-this.turn)+(b.position));
+			}
+			if(b.position<b.nextBus.position) {
+				b.distNextBus=b.nextBus.position-b.position;
+			}else {
+				b.distNextBus=Math.abs((b.nextBus.position-this.turn)+(b.position));
+			}
+			double range = b.distPreviousBus + b.distNextBus;
+			double centralPoint = range/2 + b.previousBus.position;
+			b.speedUp = false;
+			b.slowDown = false;
+			System.out.println("Bus speed regulation: "+b.id);
+			/*System.out.println("CP:"+centralPoint);
+			System.out.println("Range: "+range);
+			System.out.println(b.distNextBus);
+			System.out.println(b.distPreviousBus);*/
+			if(b.position > centralPoint+(range*this.headwayToleranceRange)) {
+				//System.out.println("Slow down!");
+				b.slowDown=true;
+			}
+			else if(b.position < centralPoint-(range*this.headwayToleranceRange)) {
+				//System.out.println("Speed up!");
+				b.speedUp = true;
+				b.mustSkipStop=true;
+			}
+			else {
+				//System.out.println("OK!");
+				b.speedUp = true;
+				b.mustSkipStop=false;
+			}
+		}
+	/**
 	 * Simulate bus position.
 	 */
 	public void simulateBusPosition() {
+		if(getActiveBuses().size()>2) {
+			for (Bus b : getActiveBuses()) {
+				determineBusSpeedRegulation(b);
+
+			}
+		}
 		for (Bus b : listBuses) {
 
 			if (b.isBusHolding || isOccupiedNextPosition(b))
 				continue;
-			if(b.speed<1)
+			if(b.speed<b.previousStop.speedLimit && b.speedUp)
 				b.speed+=0.1;
+			if(b.speed>b.previousStop.speedLimit && b.slowDown)
+				b.speed-=0.1;
 			b.position+=b.speed;
 			if(b.position > turn && circularRoute) {
 				b.previousStop = listStops.get(0);
@@ -316,7 +376,7 @@ public class ModelInstance {
 			}
 			for (Stop s : listStops) {
 				if (s.distDepot == Math.floor(b.position) && !s.isBusOnStop && !b.mustSkipStop && b.previousStop!=s) {
-					b.speed+=0;
+					b.speed=0;
 					b.position = (float) Math.floor(b.position);
 					b.isOnStop = true;
 					b.previousStop = s;
@@ -324,6 +384,8 @@ public class ModelInstance {
 					break;
 				}
 				else if (s.distDepot == Math.floor(b.position) && !s.isBusOnStop && b.mustSkipStop && b.previousStop!=s) {
+					b.position = Math.floor(b.position)+1;
+					b.previousStop = s;
 					b.mustSkipStop=false;
 					break;
 				}
@@ -340,7 +402,7 @@ public class ModelInstance {
 	public boolean isOccupiedNextPosition(Bus b) {
 		if (!b.isOnStop && !busesOvertake) {
 			for (Bus b2 : getActiveBuses()) {
-				if (b2.position - b.position <= 1 &&b2.position - b.position>0) {
+				if (b2.position - (b.position+b.speed) <= 1 &&b2.position - b.position>0) {
 					return true;
 				}
 			}
@@ -362,6 +424,7 @@ public class ModelInstance {
 				for (Stop s : listStops) {
 					if (s.distDepot == b.position) {
 						int passengersDescend = Math.round(b.passengers * (1 - s.descendRate));
+						passengersDescended += b.passengers - passengersDescend;
 						b.passengers = passengersDescend;
 						b.h += Math.round(passengersDescend * dwellPer);
 						break;
@@ -390,12 +453,14 @@ public class ModelInstance {
 					if (s.distDepot == b.position) {
 						if (b.passengers + s.passengersLeft > b.capacity) {
 							int passengersLeft = b.passengers + s.passengersLeft - b.capacity;
+							passengersAboarding+=s.passengersLeft-passengersLeft;
 							b.h += Math.round((s.passengersLeft - passengersLeft) * alightPer);
 							b.passengers = s.passengersLeft - passengersLeft;
 							s.passengersLeft = passengersLeft;
 						} else {
 							b.h += Math.round(s.passengersLeft * alightPer);
-							b.passengers = s.passengersLeft;
+							b.passengers += s.passengersLeft;
+							passengersAboarding+=s.passengersLeft;
 							s.passengersLeft = 0;
 						}
 						break;
