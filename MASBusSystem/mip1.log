@@ -2488,3 +2488,2250 @@ Gurobi 8.1.1 (win64) logging started 10/26/22 19:15:51
 
 Gurobi 8.1.1 (win64) logging started 10/26/22 19:15:51
 
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:55
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:55
+
+Academic license - for non-commercial use only
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:55
+
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Academic license - for non-commercial use only
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 835 rows and 759 columns
+Presolve time: 0.08s
+Presolved: 1949 rows, 1481 columns, 34989 nonzeros
+
+Optimize a model with 2751 rows, 2240 columns and 40154 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Presolve removed 833 rows and 758 columns
+Presolve time: 0.12s
+Presolved: 1951 rows, 1482 columns, 35005 nonzeros
+
+Presolve removed 839 rows and 775 columns
+Presolve time: 0.06s
+Presolved: 1912 rows, 1465 columns, 33924 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.554e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.446e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:55
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.889e+05
+ Factor NZ  : 4.211e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.230e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.566e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.451e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:55
+
+Academic license - for non-commercial use only
+
+Barrier performed 0 iterations in 0.35 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Barrier performed 0 iterations in 0.25 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 707 iterations and 0.25 seconds
+Optimal objective  0.000000000e+00
+
+Solved with dual simplex
+Solved in 721 iterations and 0.37 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier performed 0 iterations in 0.36 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 716 iterations and 0.37 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 813 rows and 773 columns
+Presolve time: 0.09s
+Presolved: 1927 rows, 1471 columns, 33852 nonzeros
+
+Presolve removed 812 rows and 774 columns
+Presolve time: 0.04s
+Presolved: 1928 rows, 1470 columns, 33911 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Ordering time: 0.00s
+Optimize a model with 2729 rows, 2240 columns and 39599 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.926e+05
+ Factor NZ  : 4.336e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.314e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier statistics:
+ AA' NZ     : 1.912e+05
+ Factor NZ  : 4.310e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.301e+08 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 779 rows and 770 columns
+Presolve time: 0.07s
+Presolved: 1950 rows, 1473 columns, 33627 nonzeros
+
+
+Barrier performed 0 iterations in 0.27 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 774 iterations and 0.27 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Optimize a model with 2674 rows, 2240 columns and 38282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier performed 0 iterations in 0.29 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 892 iterations and 0.29 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Presolve removed 769 rows and 807 columns
+Presolve time: 0.05s
+Presolved: 1905 rows, 1436 columns, 32628 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.957e+05
+ Factor NZ  : 4.083e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.077e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2652 rows, 2240 columns and 37809 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.32 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 973 iterations and 0.33 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 755 rows and 818 columns
+Presolve time: 0.11s
+Presolved: 1897 rows, 1425 columns, 32320 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+
+Barrier statistics:
+ AA' NZ     : 1.882e+05
+ Factor NZ  : 4.107e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.159e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2630 rows, 2240 columns and 37297 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Presolve removed 743 rows and 832 columns
+Presolve time: 0.06s
+Presolved: 1887 rows, 1409 columns, 32123 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.871e+05
+ Factor NZ  : 4.176e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.219e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.34 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 956 iterations and 0.35 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.32 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 856 iterations and 0.34 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Optimize a model with 2586 rows, 2240 columns and 36319 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.875e+05
+ Factor NZ  : 3.873e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 9.949e+07 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2586 rows, 2240 columns and 36319 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 758 rows and 863 columns
+Presolve time: 0.09s
+Presolved: 1828 rows, 1378 columns, 31197 nonzeros
+
+
+Barrier performed 0 iterations in 0.31 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 759 iterations and 0.31 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 735 rows and 861 columns
+Presolve time: 0.08s
+Presolved: 1851 rows, 1380 columns, 31568 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.796e+05
+ Factor NZ  : 4.048e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.171e+08 (less than 1 second per iteration)
+ Threads    : 3
+Ordering time: 0.00s
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:56
+
+Academic license - for non-commercial use only
+Optimize a model with 2575 rows, 2240 columns and 36034 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.847e+05
+ Factor NZ  : 4.114e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.179e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.27 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 817 iterations and 0.27 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 749 rows and 869 columns
+Presolve time: 0.09s
+Presolved: 1826 rows, 1371 columns, 31056 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.41 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 899 iterations and 0.42 seconds
+Optimal objective  0.000000000e+00
+
+Barrier statistics:
+ AA' NZ     : 1.801e+05
+ Factor NZ  : 3.875e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 1.047e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:57
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:57
+
+Academic license - for non-commercial use only
+Optimize a model with 2520 rows, 2240 columns and 34764 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 75 rows and 442 columns
+Presolve time: 0.03s
+
+Solved with barrier
+Solved in 0 iterations and 0.03 seconds
+Infeasible model
+Optimize a model with 2520 rows, 2240 columns and 34764 nonzeros
+
+Barrier performed 0 iterations in 0.32 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Solved with dual simplex
+Solved in 761 iterations and 0.32 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 75 rows and 442 columns
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.380610e+03   0.000000e+00      0s
+Presolve time: 0.01s
+
+Solved with barrier
+Solved in 0 iterations and 0.01 seconds
+Infeasible model
+
+IIS computed: 4 constraints and 2 bounds
+IIS runtime: 0.01 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.393044e+03   0.000000e+00      0s
+
+IIS computed: 4 constraints and 2 bounds
+IIS runtime: 0.01 seconds
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:57
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:57
+
+Academic license - for non-commercial use only
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve time: 0.01s
+
+Solved with dual simplex
+Solved in 0 iterations and 0.01 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.561023e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:14:57
+
+Academic license - for non-commercial use only
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.01s
+
+Solved with barrier
+Solved in 0 iterations and 0.01 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.853703e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.01s
+
+Solved with barrier
+Solved in 0 iterations and 0.01 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.645197e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:36
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:36
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:36
+
+Academic license - for non-commercial use only
+Optimize a model with 2460 rows, 2240 columns and 35439 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2762 rows, 2240 columns and 40429 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 502 rows and 945 columns
+Presolve time: 0.05s
+
+Solved with barrier
+Solved in 0 iterations and 0.05 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.674375e+02   0.000000e+00      0s
+
+IIS computed: 32 constraints and 28 bounds
+IIS runtime: 0.02 seconds
+Presolve removed 832 rows and 765 columns
+Presolve time: 0.06s
+Presolved: 1930 rows, 1475 columns, 34213 nonzeros
+
+Presolve removed 835 rows and 759 columns
+Presolve time: 0.07s
+Presolved: 1949 rows, 1481 columns, 34989 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:36
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Ordering time: 0.00s
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.921e+05
+ Factor NZ  : 4.270e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.263e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.554e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.446e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+Presolve removed 819 rows and 774 columns
+Presolve time: 0.10s
+Presolved: 1921 rows, 1470 columns, 33817 nonzeros
+
+Ordering time: 0.00s
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+Academic license - for non-commercial use only
+
+Barrier performed 0 iterations in 0.35 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 722 iterations and 0.36 seconds
+Optimal objective  0.000000000e+00
+Barrier performed 0 iterations in 0.36 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+Academic license - for non-commercial use only
+
+Solved with dual simplex
+Solved in 747 iterations and 0.37 seconds
+Optimal objective  0.000000000e+00
+
+Barrier statistics:
+ AA' NZ     : 1.903e+05
+ Factor NZ  : 4.304e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.301e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.22 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 827 iterations and 0.22 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2674 rows, 2240 columns and 38282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2674 rows, 2240 columns and 38282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2663 rows, 2240 columns and 38042 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+Academic license - for non-commercial use only
+Presolve removed 769 rows and 807 columns
+Presolve time: 0.09s
+Presolved: 1905 rows, 1436 columns, 32628 nonzeros
+
+Presolve removed 762 rows and 813 columns
+Presolve time: 0.06s
+Presolved: 1901 rows, 1430 columns, 32523 nonzeros
+
+Optimize a model with 2641 rows, 2240 columns and 37523 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.882e+05
+ Factor NZ  : 4.107e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.159e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier statistics:
+ AA' NZ     : 1.877e+05
+ Factor NZ  : 3.970e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.060e+08 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 766 rows and 807 columns
+Presolve time: 0.24s
+
+Solved with dual simplex
+Solved in 956 iterations and 0.24 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+Academic license - for non-commercial use only
+Presolve removed 751 rows and 825 columns
+Presolve time: 0.16s
+Presolved: 1890 rows, 1417 columns, 32174 nonzeros
+
+Optimize a model with 2586 rows, 2240 columns and 36319 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Optimize a model with 2586 rows, 2240 columns and 36319 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.868e+05
+ Factor NZ  : 3.911e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.027e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.38 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 851 iterations and 0.39 seconds
+nds
+Barrier solve interrupted - model solved by another algorithm
+Barrier performed 0 iterations in 0.47 seconds
+
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 929 iterations and 0.51 seconds
+Optimal objective  0.000000000e+00
+
+Solved with dual simplex
+Solved in 921 iterations and 0.48 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 752 rows and 862 columns
+Presolve time: 0.27s
+Presolved: 1834 rows, 1379 columns, 31257 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+
+Gurobi 8.1.1 (win64) logging started 27/10/2022 05:17:37 p. m.
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:37
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+Presolve time: 0.27s
++00, 1e+00]
+Presolved: 1834 rows, 1379 columns, 31257 nonzeros
+7:37
+
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.807e+05
+ Factor NZ  : 4.062e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.175e+08 (less than 1 second per iteration)
+ Threads    : 3
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.33 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 873 iterations and 0.33 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:38
+
+Presolve time: 0.08s
+
+Solved with dual simplex
+Solved in 0 iterations and 0.08 seconds
+Infeasible model
+Presolve removed 56 rows and 458 columns
+Presolve time: 0.07s
+Presolve removed 56 rows and 458 columns
+Presolve time: 0.09s
+
+Solved with barrier
+Solved in 0 iterations and 0.07 seconds
+Infeasible model
+
+Solved with barrier
+Solved in 0 iterations and 0.10 seconds
+Infeasible model
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.70934074e+05 -4.09039314e+04  5.80e+03 0.00e+00  4.04e+02     0s
+Academic license - for non-commercial use only
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.528733e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.528733e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+   1   1.92936868e+05 -4.69945112e+04  2.79e+03 4.51e-01  1.89e+02     0s
+   2   5.47375908e+04 -4.28117316e+04  8.17e+02 2.76e-01  6.93e+01     0s
+   3   2.97521415e+04 -2.67064241e+04  4.48e+02 8.12e-02  3.21e+01     0s
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+   4   8.73225824e+03 -8.83749703e+03  1.29e+02 3.05e-15  7.49e+00     0s
+Optimize a model with 2498 rows, 2240 columns and 34282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+   5   9.31567695e+02 -3.29622726e+03  1.36e+01 2.75e-15  1.37e+00     1s
+   6   1.27738714e+01 -2.28324513e+02  9.82e-02 2.66e-15  6.99e-02     1s
+   7   1.28163151e-02 -3.12820721e-01  2.73e-11 1.78e-15  9.43e-05     1s
+   8   1.28163497e-05 -3.12820686e-04  7.70e-12 3.55e-15  9.43e-08     1s
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:38
+
+
+Barrier performed 8 iterations in 0.58 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 873 iterations and 0.59 seconds
+Optimal objective  0.000000000e+00
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:17:38
+
+Academic license - for non-commercial use only
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.528733e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Presolve removed 56 rows and 458 columns
+Presolve time: 0.11s
+Presolve removed 56 rows and 458 columns
+Presolve time: 0.10s
+
+Solved with barrier
+Solved in 0 iterations and 0.14 seconds
+Infeasible model
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Solved with barrier
+Solved in 0 iterations and 0.12 seconds
+Infeasible model
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.606313e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.606313e+03   0.000000e+00      0s
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.02s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.03 seconds
+
+Solved with barrier
+Solved in 0 iterations and 0.03 seconds
+Infeasible model
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.03s
+
+Solved with barrier
+Solved in 0 iterations and 0.04 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.660447e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.660447e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+Optimize a model with 2460 rows, 2240 columns and 35439 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 502 rows and 945 columns
+Presolve time: 0.01s
+
+Solved with barrier
+Solved in 0 iterations and 0.01 seconds
+Infeasible model
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.674375e+02   0.000000e+00      0s
+
+IIS computed: 32 constraints and 28 bounds
+IIS runtime: 0.02 seconds
+Presolve removed 835 rows and 759 columns
+Presolve time: 0.05s
+Presolved: 1949 rows, 1481 columns, 34989 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Optimize a model with 2762 rows, 2240 columns and 40429 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 832 rows and 765 columns
+Presolve time: 0.04s
+Presolved: 1930 rows, 1475 columns, 34213 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.554e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.446e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+
+Barrier performed 0 iterations in 0.17 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+Academic license - for non-commercial use only
+
+Solved with dual simplex
+Solved in 747 iterations and 0.17 seconds
+Optimal objective  0.000000000e+00
+Ordering time: 0.00s
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.921e+05
+ Factor NZ  : 4.270e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.263e+08 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 819 rows and 774 columns
+Presolve time: 0.07s
+Presolved: 1921 rows, 1470 columns, 33817 nonzeros
+
+Ordering time: 0.00s
+
+Barrier performed 0 iterations in 0.21 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 907 iterations and 0.21 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+
+Barrier statistics:
+ AA' NZ     : 1.903e+05
+ Factor NZ  : 4.304e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.301e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.61683046e+05 -3.97682553e+04  1.11e+04 0.00e+00  3.79e+02     0s
+
+Barrier performed 0 iterations in 0.21 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 827 iterations and 0.22 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 816 rows and 775 columns
+Presolve time: 0.04s
+Presolved: 1924 rows, 1469 columns, 33883 nonzeros
+
+Optimize a model with 2729 rows, 2240 columns and 39599 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:54
+
+Academic license - for non-commercial use only
+Presolve removed 788 rows and 770 columns
+Presolve time: 0.06s
+Presolved: 1941 rows, 1473 columns, 33587 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.919e+05
+ Factor NZ  : 4.334e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.320e+08 (less than 1 second per iteration)
+ Threads    : 3
+Ordering time: 0.00s
+Optimize a model with 2674 rows, 2240 columns and 38282 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier performed 0 iterations in 0.18 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 766 iterations and 0.18 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 769 rows and 807 columns
+Presolve time: 0.04s
+Presolved: 1905 rows, 1436 columns, 32628 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.942e+05
+ Factor NZ  : 4.067e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.075e+08 (less than 1 second per iteration)
+ Threads    : 3
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.882e+05
+ Factor NZ  : 4.107e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.159e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.26 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 873 iterations and 0.26 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:36:55
+
+Academic license - for non-commercial use only
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.63044808e+05 -4.01302180e+04  9.32e+03 0.00e+00  3.89e+02     0s
+   1   1.29264483e+05 -4.72091499e+04  3.16e+03 4.24e-01  1.37e+02     0s
+
+Barrier performed 1 iterations in 0.22 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 953 iterations and 0.22 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2663 rows, 2240 columns and 38042 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 763 rows and 814 columns
+Presolve time: 0.02s
+Presolved: 1900 rows, 1429 columns, 32519 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.881e+05
+ Factor NZ  : 3.984e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.067e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.53814779e+05 -3.96884645e+04  8.77e+03 0.00e+00  3.80e+02     0s
+   1   1.54343744e+05 -4.64478163e+04  3.70e+03 4.22e-01  1.57e+02     0s
+
+Barrier performed 1 iterations in 0.13 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 936 iterations and 0.13 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+Optimize a model with 2460 rows, 2240 columns and 35439 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2762 rows, 2240 columns and 40429 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve time: 0.05s
+
+Solved with dual simplex
+Solved in 0 iterations and 0.05 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.674375e+02   0.000000e+00      0s
+Presolve removed 835 rows and 759 columns
+Presolve time: 0.08s
+Presolved: 1949 rows, 1481 columns, 34989 nonzeros
+
+
+IIS computed: 32 constraints and 28 bounds
+IIS runtime: 0.02 seconds
+Presolve removed 832 rows and 765 columns
+Presolve time: 0.08s
+Presolved: 1930 rows, 1475 columns, 34213 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.554e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.446e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2740 rows, 2240 columns and 39886 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.921e+05
+ Factor NZ  : 4.270e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.263e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.27 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 747 iterations and 0.27 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+
+Barrier performed 0 iterations in 0.26 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 907 iterations and 0.26 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 813 rows and 773 columns
+Presolve time: 0.08s
+Presolved: 1927 rows, 1471 columns, 33852 nonzeros
+
+Ordering time: 0.00s
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+
+Barrier statistics:
+ AA' NZ     : 1.912e+05
+ Factor NZ  : 4.310e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.301e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2685 rows, 2240 columns and 38556 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2685 rows, 2240 columns and 38556 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:45
+
+Academic license - for non-commercial use only
+Presolve removed 773 rows and 800 columns
+Presolve time: 0.06s
+Presolved: 1912 rows, 1443 columns, 32819 nonzeros
+
+
+Barrier performed 0 iterations in 0.29 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 937 iterations and 0.29 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 773 rows and 800 columns
+Presolve time: 0.09s
+Presolved: 1912 rows, 1443 columns, 32819 nonzeros
+
+Ordering time: 0.00s
+Ordering time: 0.00s
+Optimize a model with 2652 rows, 2240 columns and 37809 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2663 rows, 2240 columns and 38042 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.900e+05
+ Factor NZ  : 4.019e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.069e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier statistics:
+ AA' NZ     : 1.900e+05
+ Factor NZ  : 4.019e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.069e+08 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 746 rows and 807 columns
+Presolve removed 275 rows and 346 columns
+Presolve time: 0.30s
+
+Solved with dual simplex
+Solved in 856 iterations and 0.30 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Academic license - for non-commercial use only
+
+
+rrier performed 0 iterations in 0.45 seconds
+Barrier solve interrupted - model solved by another algorithm
+Barrier performed 0 iterations in 0.46 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 906 iterations and 0.46 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+
+Solved with dual simplex
+Solved in 906 iterations and 0.46 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Academic license - for non-commercial use only
+Presolve time: 0.30s
+
+Solved with dual simplex
+Solved in 936 iterations and 0.30 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Optimize a model with 2531 rows, 2240 columns and 34969 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2531 rows, 2240 columns and 34969 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2531 rows, 2240 columns and 34969 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2531 rows, 2240 columns and 34969 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2531 rows, 2240 columns and 34969 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Presolve removed 785 rows and 902 columns
+Presolve time: 0.15s
+Presolved: 1746 rows, 1338 columns, 29390 nonzeros
+
+Presolve removed 810 rows and 914 columns
+Presolve time: 0.17s
+Presolved: 1721 rows, 1326 columns, 28888 nonzeros
+
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.630e+05
+ Factor NZ  : 3.485e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 8.814e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.25 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 644 iterations and 0.25 seconds
+Optimal objective  0.000000000e+00
+
+Barrier statistics:
+ AA' NZ     : 1.585e+05
+ Factor NZ  : 3.370e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 8.411e+07 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 785 rows and 902 columns
+Presolve time: 0.24s
+Presolved: 1746 rows, 1338 columns, 29390 nonzeros
+
+Presolve removed 810 rows and 914 columns
+Presolve time: 0.23s
+Presolved: 1721 rows, 1326 columns, 28888 nonzeros
+
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.630e+05
+ Factor NZ  : 3.485e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 8.814e+07 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 810 rows and 914 columns
+Presolve time: 0.31s
+Presolved: 1721 rows, 1326 columns, 28888 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.585e+05
+ Factor NZ  : 3.370e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 8.411e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.40 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 731 iterations and 0.40 seconds
+Optimal objective  0.000000000e+00
+
+Barrier performed 0 iterations in 0.45 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+Academic license - for non-commercial use only
+
+Barrier performed 0 iterations in 0.42 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+Ordering time: 0.00s
+
+
+lved with dual simplex
+Solved with dual simplex
+nd 0.45 seconds
+Optimal objective  0.000000000e+00
+Solved in 683 iterations and 0.42 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2454 rows, 2240 columns and 33220 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:37:46
+
+Academic license - for non-commercial use only
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.585e+05
+ Factor NZ  : 3.370e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 8.411e+07 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.11s
+
+Solved with barrier
+Solved in 0 iterations and 0.11 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.630485e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.06s
+
+Solved with barrier
+Solved in 0 iterations and 0.06 seconds
+Infeasible model
+Presolve removed 57 rows and 490 columns
+Presolve time: 0.06s
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.02s
+
+Solved with barrier
+Solved in 0 iterations and 0.02 seconds
+Infeasible model
+
+Solved with barrier
+Solved in 0 iterations and 0.06 seconds
+
+feasible model
+Barrier performed 0 iterations in 0.50 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 731 iterations and 0.50 seconds
+Optimal objective  0.000000000e+00
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.381210e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.381210e+03   0.000000e+00      0s
+
+IIS computed: 3 constraints and 1 bounds
+IIS runtime: 0.01 seconds
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.06 seconds
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Academic license - for non-commercial use only
+Optimize a model with 2460 rows, 2240 columns and 35439 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2784 rows, 2240 columns and 40999 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Presolve removed 502 rows and 945 columns
+Presolve time: 0.03s
+
+Solved with barrier
+Solved in 0 iterations and 0.03 seconds
+Infeasible model
+Academic license - for non-commercial use only
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.674375e+02   0.000000e+00      0s
+
+IIS computed: 32 constraints and 28 bounds
+IIS runtime: 0.02 seconds
+Presolve removed 835 rows and 759 columns
+Presolve time: 0.05s
+Presolved: 1949 rows, 1481 columns, 34989 nonzeros
+
+Optimize a model with 2751 rows, 2240 columns and 40154 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Presolve removed 839 rows and 776 columns
+Presolve time: 0.05s
+Presolved: 1912 rows, 1464 columns, 33935 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.973e+05
+ Factor NZ  : 4.554e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.446e+08 (less than 1 second per iteration)
+ Threads    : 3
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.895e+05
+ Factor NZ  : 4.385e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.352e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Academic license - for non-commercial use only
+
+Barrier performed 0 iterations in 0.20 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.12472600e+05 -3.81203339e+04  1.08e+04 0.00e+00  3.32e+02     0s
+
+Solved with dual simplex
+Solved in 914 iterations and 0.21 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2729 rows, 2240 columns and 39599 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2729 rows, 2240 columns and 39599 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Presolve removed 793 rows and 770 columns
+Presolve time: 0.13s
+Presolved: 1936 rows, 1473 columns, 33532 nonzeros
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Academic license - for non-commercial use only
+Presolve removed 793 rows and 770 columns
+Optimize a model with 2630 rows, 2240 columns and 37297 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2630 rows, 2240 columns and 37297 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Presolve time: 0.10s
+Presolved: 1936 rows, 1473 columns, 33532 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.932e+05
+ Factor NZ  : 4.050e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.069e+08 (less than 1 second per iteration)
+ Threads    : 3
+Presolve removed 749 rows and 832 columns
+Presolve time: 0.10s
+Presolved: 1881 rows, 1409 columns, 31979 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:20
+
+Presolve removed 749 rows and 832 columns
+Presolve time: 0.12s
+Presolved: 1881 rows, 1409 columns, 31979 nonzeros
+
+
+Barrier statistics:
+ AA' NZ     : 1.932e+05
+ Factor NZ  : 4.050e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.069e+08 (less than 1 second per iteration)
+ Threads    : 3
+Optimize a model with 2608 rows, 2240 columns and 36798 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Optimize a model with 2597 rows, 2240 columns and 36531 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.859e+05
+ Factor NZ  : 3.846e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 9.860e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier statistics:
+ AA' NZ     : 1.859e+05
+ Factor NZ  : 3.846e+05 (roughly 4 MBytes of memory)
+ Factor Ops : 9.860e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.60 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 808 iterations and 0.60 seconds
+Optimal objective  0.000000000e+00
+
+Barrier performed 0 iterations in 0.53 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Barrier performed 0 iterations in 0.43 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 838 iterations and 0.43 seconds
+Optimal objective  0.000000000e+00
+
+Barrier performed 0 iterations in 0.43 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 838 iterations and 0.43 seconds
+Optimal objective  0.000000000e+00
+
+Solved with dual simplex
+Solved in 808 iterations and 0.54 seconds
+Optimal objective  0.000000000e+00
+   1   1.24152783e+05 -4.18187506e+04  4.12e+03 4.35e-01  1.28e+02     1s
+
+Barrier performed 1 iterations in 0.93 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 736 iterations and 0.94 seconds
+Optimal objective  0.000000000e+00
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+Presolve removed 743 rows and 847 columns
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+Presolve time: 0.32s
+Presolved: 1865 rows, 1394 columns, 31663 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+Academic license - for non-commercial use only
+Presolve removed 732 rows and 854 columns
+Academic license - for non-commercial use only
+Presolve time: 0.27s
+Presolved: 1865 rows, 1387 columns, 31686 nonzeros
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Ordering time: 0.00s
+Ordering time: 0.00s
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+
+Gurobi 8.1.1 (win64) logging started 10/27/22 17:38:21
+
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.04s
+
+Solved with barrier
+Solved in 0 iterations and 0.04 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.04 seconds
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.838e+05
+ Factor NZ  : 4.084e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.160e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.48 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 867 iterations and 0.48 seconds
+Optimal objective  0.000000000e+00
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Optimize a model with 2443 rows, 2240 columns and 33029 nonzeros
+Coefficient statistics:
+  Matrix range     [5e-03, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [5e+01, 8e+01]
+  RHS range        [7e-03, 1e+04]
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+
+Barrier statistics:
+ AA' NZ     : 1.844e+05
+ Factor NZ  : 4.088e+05 (roughly 5 MBytes of memory)
+ Factor Ops : 1.149e+08 (less than 1 second per iteration)
+ Threads    : 3
+
+Barrier performed 0 iterations in 0.43 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 752 iterations and 0.43 seconds
+Optimal objective  0.000000000e+00
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.05s
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.03s
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.05s
+
+Solved with barrier
+Solved in 0 iterations and 0.06 seconds
+
+Infeasible model
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.03s
+
+Solved with barrier
+Solved in 0 iterations and 0.03 seconds
+Infeasible model
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.05s
+
+Solved with barrier
+
+Solved with barrier
+s and 0.05 seconds
+Infeasible model
+Solved in 0 iterations and 0.03 seconds
+Infeasible model
+Presolve time: 0.02s
+
+Solved with barrier
+Solved in 0 iterations and 0.02 seconds
+Infeasible model
+Presolve removed 76 rows and 498 columns
+Presolve time: 0.02s
+
+Solved with barrier
+Solved in 0 iterations and 0.02 seconds
+   Dual Inf.      Time
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Solved with barrier
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+Infeasible model
+000e+00   2.349569e+03   0.000000e+00      0s
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+Solved in 0 iterations and 0.08 seconds
+Infeasible model
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+
+IIS computed: 14 constraints and 13 bounds
+
+S runtime: 0.06 seconds
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.07 seconds
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.06 seconds
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.06 seconds
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.07 seconds
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.349569e+03   0.000000e+00      0s
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.05 seconds
+
+IIS computed: 14 constraints and 13 bounds
+IIS runtime: 0.04 seconds

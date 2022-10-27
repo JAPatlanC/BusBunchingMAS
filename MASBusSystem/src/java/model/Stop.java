@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 import org.apache.commons.math3.distribution.PoissonDistribution;
 
 // TODO: Auto-generated Javadoc
@@ -11,6 +13,9 @@ public class Stop {
 	
 	/** The Stop identifier. */
 	public int id;
+	
+	/* The list of waiting passengers */ 
+	public List<Passenger> listWaitingPassengers;
 	
 	/** The arrive rate. */
 	public float arriveRate;
