@@ -30,7 +30,7 @@ import java.util.*;
 /**
  * The Class VCWorld.
  */
-public class VCWorld extends Environment {
+public class BusimaController extends Environment {
 
 	/** The ban. */
 	private boolean ban = true;
@@ -41,10 +41,10 @@ public class VCWorld extends Environment {
 	private ModelInstance modelInstance;
 
 	/** The logger. */
-	private Logger logger = Logger.getLogger("MAS-BusSystem." + VCWorld.class.getName());
+	private Logger logger = Logger.getLogger("MAS-BusSystem." + BusimaController.class.getName());
 
 	/** The folder name. */
-	private String folderName = "C:\\Users\\ja_pa\\OneDrive\\Documentos\\Tesis\\instancias\\ECOVIA\\";
+	private String folderName = "instances/";
 
 	/** The i. */
 	private int i = 0;
@@ -68,17 +68,6 @@ public class VCWorld extends Environment {
 		logger.info("Initializing");
 		totalDistances = new ArrayList<Float>();
 		ModelSolver ms = null;
-		// The name of the folder to read.
-		// String folderName =
-		// "C:\\Users\\ja_pa\\OneDrive\\Documentos\\Tesis\\instancias\\Instances on T
-		// time\\";
-		/*
-		 * int i=0; for (ModelInstance mi :
-		 * ModelInstanceLoader.loadBusHoldingModels(folderName)) {
-		 * System.out.println("------Resolviendo instancia "+(i++)+"---------");
-		 * ModelSolver.solveBusHolding(mi);
-		 * System.out.println("----------------------------------------------"); }
-		 */
 		updatePercepts("control", "start");
 	}
 
@@ -94,11 +83,6 @@ public class VCWorld extends Environment {
 			ban = true;
 			updateEnvironment();
 		}
-
-		/*
-		 * if (ban) addPercept(Literal.parseLiteral("paso1")); else
-		 * addPercept(Literal.parseLiteral("paso2"));
-		 */
 	}
 
 	/**
@@ -337,13 +321,6 @@ public class VCWorld extends Environment {
 					modelInstance.busHoldingCalls += 2 * (i);
 					modelInstance.busHoldingPeriod = (int) Math
 							.round(modelInstance.tn * 0.9 / (modelInstance.busHoldingCalls + 1));
-					// modelInstance.dwellPer*=2*(i+1);
-					// modelInstance.alightPer*=2*(i+1);
-					// modelInstance.maxHeadway+=1*(i+1);
-				}
-				if (i == samples) {
-					// System.out.println(totalDistances.stream().mapToDouble(a ->
-					// a).average().getAsDouble());
 				}
 			}
 		}

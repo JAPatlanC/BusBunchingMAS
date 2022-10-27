@@ -1,8 +1,8 @@
-MAS vacuumcleaner {
+MAS busima {
 
 	infrastructure: Centralised
 
-	environment: controller.VCWorld
+	environment: controller.BusimaController
 	
 	agents:
 		control;

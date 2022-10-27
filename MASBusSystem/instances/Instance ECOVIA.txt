@@ -1,0 +1,38 @@
+@INSTANCE PROPERTIES@
+#Snapshot Time= 0
+#Number of Stops= 40
+#Number of Buses= 7
+#Bus capacity= 80
+#Max Holding Time= 50
+#Aboarding Time (per passenger)= 0.15
+#Descending Time (per passenger)= 0.25
+#Release Time of each bus= 3
+#Simulation end time= 150
+#Number of calls to the Bus Holding Solver= 15
+#Buses overtake = false
+#Circular route = true
+#Bus Holding Method (based on the modelSolver.java options) = CMOT
+#Headway Tolerance Range (Percentage from 0 to 1) = 0.3
+
+@STOPS PROPERTIES@
+#Arriving Rate Values
+6.92|4.06|2|1.44|3.03|1.46|1.56|1.64| 1.56| 1.13| 0.88|1| 0.88| 2| 0.82| 0.75| 7| 0.8| 0.2| 0.33| 0.66| 0.66| 0.45| 0.42| 1.33|0.33| 0.13| 0.26| 0.33| 1.13| 0.38| 0.5| 1| 1.06| 0.26| 0.46| 0.13| 0.13|0|0
+#Descending Ratio Values
+0|0|0|0.0049| 0.0092| 0.0138| 0.154| 0.0244| 0.035| 0.0275|0.0114| 0.0145| 0.026| 0.0651| 0.021| 0.0109| 0.93| 0.0224| 0.0497| 0.0475|0.0474| 0.726| 0.0348| 0.1544| 0.062| 0.0228| 0.0771| 0.16| 0.037| 0.0669|0.1145| 0.2| 0.22| 0.125| 0.1945| 0.2702| 0.35| 0.37| 0.47| 1
+#Distance between stops
+0| 16| 7| 7| 7| 11| 10| 5| 8| 5|6| 4| 9| 4| 9| 5| 5| 6| 6| 11| 4| 10| 12|9| 5| 5| 10| 9| 7| 7| 9| 9| 7| 6| 10| 10| 6|7| 23| 8
+
+#Number of passengers waiting in each stop at Snapshot Time
+0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+#Speed limit between stops
+1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1
+
+@BUSES PROPERTIES@
+#Buses Index
+1|2|3|4|5|6|7
+#Buses current position
+0|0|0|0|0|0|0
+#Buses current passengers
+0|0|0|0|0|0|0
+#Last stop visited of each bus
+1|1|1|1|1|1|1
